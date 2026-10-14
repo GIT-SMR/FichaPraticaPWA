@@ -11,4 +11,11 @@
     As "branchs" são ramificações que permitem desenvolver novas funcionalidades, corrigir erros ou experimentar ideias sem alterar diretamente a versão principal do projeto. Facilitam também o trabalho em equipa, porque cada pessoa pode trabalhar numa "branch" e integrar depois as alterações através do comando "merge". Isto ajuda a separar tarefas e a testar o trabalho antes de o juntar à versão principal. (Chacon & Straub, 2014)
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
+
+    Um conflito pode surgir quando o Git não consegue combinar automaticamente as alterações nos ficheiros. Por exemplo, ao recuperar as alterações com "git stash pop", podemos ter versões diferentes da mesma linha e o Git não sabe qual deve manter.
+
+    Para resolver o conflito, analisámos os ficheiros afetados, escolhemos o conteúdo correto ou combinamos as duas versões, finalmente removemos os marcadores de conflito. Após a resolução do conflito, guardámos os ficheiros, verificámos o resultado e usamos "git add" para marcar a resolução. Finalmente executamos um "commit" para registar as alterações.
+
+    Se o conflito resultar da execução de "git stash pop", a entrada mantém-se guardada no "stash", e só deve ser removida depois de confirmar que recuperámos tudo corretamente. (Chacon & Straub, 2014; Git, s.d., git-stash)
+
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
