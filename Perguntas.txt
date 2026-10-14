@@ -7,5 +7,8 @@
     O comando "pop", através de "git stash pop", recupera alterações que tinham sido guardadas temporariamente com "git stash" e aplica-as ao trabalho atual. Se a aplicação decorrer sem conflitos, essa entrada é retirada da lista de alterações guardadas. (Git, s.d., git-stash)
 
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
+
+    As "branchs" são ramificações que permitem desenvolver novas funcionalidades, corrigir erros ou experimentar ideias sem alterar diretamente a versão principal do projeto. Facilitam também o trabalho em equipa, porque cada pessoa pode trabalhar numa "branch" e integrar depois as alterações através do comando "merge". Isto ajuda a separar tarefas e a testar o trabalho antes de o juntar à versão principal. (Chacon & Straub, 2014)
+
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
