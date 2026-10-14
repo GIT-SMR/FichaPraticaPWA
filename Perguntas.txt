@@ -19,3 +19,7 @@
     Se o conflito resultar da execução de "git stash pop", a entrada mantém-se guardada no "stash", e só deve ser removida depois de confirmar que recuperámos tudo corretamente. (Chacon & Straub, 2014; Git, s.d., git-stash)
 
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?
+
+    O "clone" cria uma cópia local de um repositório, normalmente no nosso computador, incluindo o histórico. Permite trabalhar nos ficheiros localmente, mas não nos dá, por si só, autorização para enviar alterações para o repositório original. (Git, s.d., git-clone)
+
+    O "fork", no GitHub, cria um repositório separado na nossa conta, a partir de outro, mantendo uma ligação ao original. Podemos alterá-lo e propor que essas alterações sejam integradas no projeto original através do comando "pull request", ou seja, um pedido de integração. É habitual criar primeiro um "fork" e depois cloná-lo para trabalhar no computador. (GitHub, s.d.)
