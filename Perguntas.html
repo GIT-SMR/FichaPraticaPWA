@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perguntas e respostas sobre Git e GitHub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #202a35;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    main {
+      max-width: 54rem;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border: 1px solid #dce2e8;
+      border-radius: 0.75rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .perguntas {
+      margin: 0;
+      padding: 0;
+      /* A numeração original está preservada no texto de cada pergunta. */
+      list-style: none;
+    }
+
+    .perguntas > li + li {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dce2e8;
+    }
+
+    .pergunta {
+      color: #173c5c;
+      font-size: 1.1rem;
+    }
+
+    .operacoes {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .sublinhado {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 0.75rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <ol class="perguntas" role="list">
+      <li value="1">
+        <p class="pergunta"><strong>1 - O que são operações de <span class="sublinhado">“Commit”</span>, <span class="sublinhado">“Push”</span> e <span class="sublinhado">“Pop”</span> efetuadas num repositório?</strong></p>
+        <ul class="operacoes" role="list">
+          <li>
+            <p>O comando <em>"commit"</em> regista no histórico do repositório local as alterações que selecionámos, acompanhado de um comentário descritivo da ação tomada, exemplo "commit file 'Perguntas.txt'. Funciona como um ponto de referência ao qual podemos voltar. Fazer <em>"commit"</em> não envia automaticamente as alterações para o GitHub. (Git, s.d., git-commit)</p>
+          </li>
+          <li>
+            <p>O comando <em>"push"</em> envia os commits locais para um repositório remoto, como o GitHub, permitindo partilhar as alterações. (Git, s.d., git-push)</p>
+          </li>
+          <li>
+            <p>O comando <em>"pop"</em>, através de <em>"git stash pop"</em>, recupera alterações que tinham sido guardadas temporariamente com <em>"git stash"</em> e aplica-as ao trabalho atual. Se a aplicação decorrer sem conflitos, essa entrada é retirada da lista de alterações guardadas. (Git, s.d., git-stash)</p>
+          </li>
+        </ul>
+      </li>
+      <li value="2">
+        <p class="pergunta"><strong>2 – Quais sáo as vantagens de usar <span class="sublinhado">Branchs</span> num repositório git?</strong></p>
+        <p>As "branchs" são ramificações que permitem desenvolver novas funcionalidades, corrigir erros ou experimentar ideias sem alterar diretamente a versão principal do projeto. Facilitam também o trabalho em equipa, porque cada pessoa pode trabalhar numa "branch" e integrar depois as alterações através do comando <em>"merge"</em>. Isto ajuda a separar tarefas e a testar o trabalho antes de o juntar à versão principal. (Chacon &amp; Straub, 2014)</p>
+      </li>
+      <li value="3">
+        <p class="pergunta"><strong>3 – Nos Merges de conteúdos resultantes de um <span class="sublinhado">“Pop”</span> podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?</strong></p>
+        <p>Um conflito pode surgir quando o Git não consegue combinar automaticamente as alterações nos ficheiros. Por exemplo, ao recuperar as alterações com <em>"git stash pop"</em>, podemos ter versões diferentes da mesma linha e o Git não sabe qual deve manter.</p>
+        <p>Para resolver o conflito, analisámos os ficheiros afetados, escolhemos o conteúdo correto ou combinamos as duas versões, finalmente removemos os marcadores de conflito. Após a resolução do conflito, guardámos os ficheiros, verificámos o resultado e usamos <em>"git add"</em> para marcar a resolução. Finalmente executamos um <em>"commit"</em> para registar as alterações.</p>
+        <p>Se o conflito resultar da execução de <em>"git stash pop"</em>, a entrada mantém-se guardada no "stash", e só deve ser removida depois de confirmar que recuperámos tudo corretamente. (Chacon &amp; Straub, 2014; Git, s.d., git-stash)</p>
+      </li>
+      <li value="4">
+        <p class="pergunta"><strong>4 – <span class="sublinhado">“Clone”</span> e <span class="sublinhado">“Fork”</span> são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?</strong></p>
+        <p>O "clone" cria uma cópia local de um repositório, normalmente no nosso computador, incluindo o histórico. Permite trabalhar nos ficheiros localmente, mas não nos dá, por si só, autorização para enviar alterações para o repositório original. (Git, s.d., git-clone)</p>
+        <p>O "fork", no GitHub, cria um repositório separado na nossa conta, a partir de outro, mantendo uma ligação ao original. Podemos alterá-lo e propor que essas alterações sejam integradas no projeto original através do comando <em>"pull request"</em>, ou seja, um pedido de integração. É habitual criar primeiro um "fork" e depois cloná-lo para trabalhar no computador. (GitHub, s.d.)</p>
+      </li>
+    </ol>
+  </main>
+</body>
+</html>
